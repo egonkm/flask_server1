@@ -70,8 +70,20 @@ labels1 = [
     
     ]
            
+satisfacion = [
+    "En la mayoría de los aspectos mi vida es como yo quiero que sea",
+    "Las circunstancias de mi vida son muy buenas", 
+    "Estoy satisfecho con mi vida", 
+    "Hasta ahora he conseguido de la vida las cosas que considero importantes",
+    "Si pudiera vivir mi vida otra vez no cambiaría casi nada"
+]
            
-           
+labels_sat = [
+    "Muy en desacuerdo", "En desacuerdo","Neutro",
+    "De acuerdo", "Muy de acuerdo"   
+    
+    ]
+
 perfectionism_questions = [
     "Mis padres me fijaron metas muy altas",
     "La organización es muy importante para mí",
@@ -111,13 +123,18 @@ perfectionism_questions = [
 ]
 
 labels2 = ["En total desacuerdo", "En desacuerdo", 
-           "Neutro", "En acuerdo", "Completamente de acuerdo"
+           "Neutro", "De acuerdo", "Completamente de acuerdo"
            ]
 
 if __name__=="__main__":
     
-    for lista, labels in  zip([ survey_questions, perfectionism_questions], 
-                              [labels1, labels2]):
+    idx = 1
+    for lista, labels in  zip([ survey_questions, 
+                                satisfacion, 
+                                perfectionism_questions], 
+                              [labels1, labels_sat, labels2]):
         
-        print(generate_html(lista, 1, labels))
+        html = generate_html(lista, idx, labels)
+        idx = idx + len(lista)
+        print(html)
         print("\n--------------------------------")
