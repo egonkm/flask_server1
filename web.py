@@ -33,7 +33,6 @@ def route_predecir1():
         
         return "Erro: "+str(e)
 
-
     return f"Valor predicto: {p}"
 
 if __name__=="__main__":

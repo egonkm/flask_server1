@@ -37,15 +37,15 @@ organizacion = [37+item for item in [2,7,8,27,29,31]]
     
 def guardar(datos, file_name):
     
-    if datos is dict:
-        datos = list(datos.values())
+    
+    if isinstance(datos, dict):
+        datos = [v for k,v in datos.items()]
         
     linea = ",".join( [str(item) for item in datos])
         
     with open(file_name, "a") as f:
-        f.writelines([linea])
-        
-        
+        f.write(linea)
+        f.write("\n")
         
 def predecir(datos):
     
