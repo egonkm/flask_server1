@@ -7,7 +7,6 @@ Created on Mon Jul 25 08:52:18 2022
 """
 
 from flask import Flask
-import tempfile
 from predictor1 import predecir
 
 app = Flask(__name__)
