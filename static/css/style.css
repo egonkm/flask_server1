@@ -1,0 +1,60 @@
+label,p {
+    font-size:28px;
+    font-weight: bold;
+}
+
+body {
+   
+    justify-content: center; /* Centers flex items along the main axis (horizontally) */
+    align-items: center; /* Centers flex items along the cross axis (vertically) */
+
+}
+
+
+.principal {
+	align: center;
+    text-align: left; /* Aligns text to the left */
+    background-color: lightblue; /* Sets the background color to light blue */
+    margin-left: 40px; /* Sets left margin to 40px */
+    width: 70%;
+    padding : 30px;
+}
+
+
+h1, h2, h3 {
+    text-align: center; /* Centralizes the text */
+    background-color: darkblue; /* Sets the background color to dark blue */
+    color: white; /* Sets the text color to white for better readability */
+}
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+   font-size: 30px;
+  }
+
+ h3 {
+    font-size: 28px;
+}
+
+select,
+input[type="number"] {
+    font-size: 32px; /* Sets the font size to 16 pixels */
+    font-weight: bold; /* Makes the font bold */
+}
+
+option {
+    font-size: 18px; /* Sets the font size to 16 pixels */
+    font-weight: bold; /* Makes the font bold */
+}
+
+input[type="submit"] {
+    font-size: larger; /* Makes the font size larger */
+    background-color: darkblue; /* Sets the background color to dark blue */
+    color: white; /* Sets the text color to white for better readability */
+    border: none; /* Removes the border */
+    padding: 10px 20px; /* Adds some padding around the text for better appearance */
+    border-radius: 5px; /* Optional: Rounds the corners of the button */
+}
