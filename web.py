@@ -32,11 +32,7 @@ def route_predecir1():
     except Exception as e:
         
         return "Erro: "+str(e)
-    
-    p = str(int(p))
-    
-    response["predict"] = p
-    
+
 
     return f"Valor predicto: {p}"
 
