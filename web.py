@@ -8,6 +8,7 @@ Created on Mon Jul 25 08:52:18 2022
 
 from flask import Flask
 from predictor1 import predecir
+from resultados1 import resultados
 
 app = Flask(__name__)
 
@@ -33,7 +34,9 @@ def route_predecir1():
         
         return "Erro: "+str(e)
 
-    return f"Valor predicto: {p}"
+    return render_template("resultado.html",
+                              resultado=resultados[p]
+                               )
 
 if __name__=="__main__":
     

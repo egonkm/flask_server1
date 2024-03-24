@@ -49,7 +49,7 @@ def guardar(datos, file_name):
         
 def predecir(datos):
     
-    numerical = [ datos["age"],        
+    numerical = [ # datos["age"],        
      sumar(datos, 0, 0, influencias), # 'Influenciapaterna', 
      sumar(datos, 0, 0, organizacion), # 'organización',
      sumar(datos, 0, 0, expectativas), #      'Expectativasallogro', 
@@ -63,16 +63,18 @@ def predecir(datos):
     
     num_st = st.transform([numerical])
     
-    X = [[
-          datos["gender"], 
-          datos["Category"]] + 
+    X = [
+        #[
+        #  datos["gender"], 
+        #  datos["Category"]] + # baloncesto o futebol
         
-          list(num_st[0]) + 
+          list(num_st[0])  
           
-          [
-          1 if datos["sportCategory"] in ["4", "5"] else 0, # catdep_2
-          1 if datos["sportCategory"] == "6" else 0  # catdep_3
-        ]]
+         # [ # categoria transformada (dummies)
+         # 1 if datos["sportCategory"] in ["4", "5"] else 0, # catdep_2
+         # 1 if datos["sportCategory"] == "6" else 0  # catdep_3
+      #  ]
+    ]
     
     pred = modelo1.predict(X)[0]
     

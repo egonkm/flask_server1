@@ -21,7 +21,7 @@ body {
 }
 
 
-h1, h2, h3 {
+h1, h2 {
     text-align: center; /* Centralizes the text */
     background-color: darkblue; /* Sets the background color to dark blue */
     color: white; /* Sets the text color to white for better readability */
@@ -35,9 +35,6 @@ h2 {
    font-size: 30px;
   }
 
- h3 {
-    font-size: 28px;
-}
 
 select,
 input[type="number"] {
